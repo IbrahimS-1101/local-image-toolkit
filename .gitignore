@@ -1,0 +1,41 @@
+.venv/
+venv/
+__pycache__/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+build/
+dist/
+*.spec
+*.egg-info/
+
+# Generated releases, dependency archives, and test output
+/release*/
+/.release-materials/
+/licenses/
+/dependency-sources/
+/test-artifacts*/
+*.exe
+*.dll
+*.pyd
+*.zip
+*.tar.xz
+*.log
+
+# Private project records are kept locally, outside the public source tree
+/PLAN.md
+/VALIDATION.md
+/RELEASE_CHECKLIST.md
+/REPOSITORY_REVIEW.md
+/work/
+
+# Local configuration and editor state
+.env
+.env.*
+!.env.example
+preferences.json
+.vscode/
+.idea/
+Thumbs.db
+.DS_Store
