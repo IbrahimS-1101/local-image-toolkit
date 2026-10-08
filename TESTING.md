@@ -33,6 +33,13 @@ Hands-on testing by the creator confirmed JPEG → PNG, mixed JPEG/PNG batches e
 as PNG, batch logo size/margin changes, resizing modes including percentage and fit box,
 and PNG → WebP. These were functional checks, not a comprehensive image-quality benchmark.
 
+On 2026-10-09, the creator reported a successful Windows 10 VM test using the latest
+Windows 10 installation media available from Microsoft at the time. In one export, the
+portable application converted PNG to WebP, enlarged to 200%, and applied a bottom-right
+logo with custom margins. The creator confirmed smooth operation and accurate output
+on all these points. The exact Windows version/build, absence of installed Python, and
+network isolation were not recorded for this run.
+
 ## Compatibility boundaries
 
 The Qt 6.11 dependency requires Windows 10 version 1809 (build 17763) or later,
@@ -41,11 +48,11 @@ or Windows 11, on x64. See [Qt platform requirements](https://doc.qt.io/qt-6.11/
 On 2026-10-08, the creator tested `release-public` in a fresh Windows 10 version 1607
 (build 14393) VM. It failed before application startup with a Python DLL LoadLibrary
 error. This OS is below the dependency minimum; the precise failing dependency has not
-been identified. This does not establish whether the package works on supported Windows 10.
+been identified. The later successful Windows 10 test is recorded above.
 
-The current portable build is unsigned. A clean supported Windows 10 VM without Python
-(Windows 10 22H2 is the next test target), physical high-DPI behavior, and a physically
-disconnected-network test remain pending. Offscreen UI checks do not replace hands-on
+The current portable build is unsigned. Confirmation that the successful Windows 10 VM
+run had no installed Python and no network access, plus physical high-DPI testing,
+remain pending. Offscreen UI checks do not replace hands-on
 Explorer drag/drop and keyboard usability checks.
 
 The application uses no networking APIs. The build-time materials collector downloads
