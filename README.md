@@ -42,7 +42,10 @@ treated as sRGB after mode conversion.
 
 ## Current limits
 
-- Windows x64. Tested on Windows 11; Windows 10 minimum-version compatibility is not yet confirmed.
+- Windows x64: **Windows 10 version 1809 (build 17763) or later, or Windows 11**.
+  This is the [Qt 6.11 platform minimum](https://doc.qt.io/qt-6.11/supported-platforms.html).
+  Tested successfully on Windows 11; clean-machine Windows 10 validation is still pending.
+  Windows 10 version 1607 (build 14393) is below the minimum and failed to launch in a fresh VM.
 - Still JPEG, PNG, and WebP images only. Animated images and other formats are rejected.
 - 50-megapixel limit for each input, logo, and output.
 - One set of settings per batch. No per-image overrides, cropping, text watermarks, HEIC/RAW,

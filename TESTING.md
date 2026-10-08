@@ -35,10 +35,18 @@ and PNG → WebP. These were functional checks, not a comprehensive image-qualit
 
 ## Compatibility boundaries
 
-The current portable build is unsigned. Windows 10 minimum-version compatibility, a
-separate clean Windows machine without Python, physical high-DPI behavior, and a physically
-disconnected-network test have not yet been independently verified. Offscreen UI checks
-do not replace hands-on Explorer drag/drop and keyboard usability checks.
+The Qt 6.11 dependency requires Windows 10 version 1809 (build 17763) or later,
+or Windows 11, on x64. See [Qt platform requirements](https://doc.qt.io/qt-6.11/supported-platforms.html).
+
+On 2026-10-08, the creator tested `release-public` in a fresh Windows 10 version 1607
+(build 14393) VM. It failed before application startup with a Python DLL LoadLibrary
+error. This OS is below the dependency minimum; the precise failing dependency has not
+been identified. This does not establish whether the package works on supported Windows 10.
+
+The current portable build is unsigned. A clean supported Windows 10 VM without Python
+(Windows 10 22H2 is the next test target), physical high-DPI behavior, and a physically
+disconnected-network test remain pending. Offscreen UI checks do not replace hands-on
+Explorer drag/drop and keyboard usability checks.
 
 The application uses no networking APIs. The build-time materials collector downloads
 dependency sources when they are not cached; `--offline` prevents those downloads.
