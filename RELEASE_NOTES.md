@@ -27,14 +27,18 @@ is required. The ZIP includes application source, documentation, and dependency 
 The automated suite passed. A packaged-app acceptance run covered 100
 mixed-format images, preview, failure/retry, cancellation, and presets. User testing also
 passed mixed JPEG/PNG batches, format conversion, batch logo changes, and several resize modes.
+Creator testing on a fresh Windows 10 VM passed PNG to WebP with 200% enlargement
+and a bottom-right logo with custom margins. A repeat PNG to JPEG test passed with
+network access disabled; command checks found Store Python aliases and no Python launcher.
 See `TESTING.md` for reproducible checks and verification boundaries.
 
 ## Current limits
 
-Windows x64 only. Still JPEG, PNG, and WebP images only, with a 50-megapixel limit per
+Windows x64: Windows 10 version 1809 (build 17763) or later, or Windows 11. Still JPEG, PNG, and WebP images only, with a 50-megapixel limit per
 input, logo, and output. No cropping, text watermarks, animation editing, HEIC/RAW, or
-automatic updates. The executable is unsigned. A separate clean-machine compatibility
-check remains pending; Windows 10 minimum-version compatibility has not been confirmed.
+automatic updates. The executable is unsigned. Windows 10 version 1607 is unsupported and failed to launch. The exact build of the
+successful Windows 10 VM was not recorded; the dependency minimum is not itself a
+claim that every supported Windows build has been tested.
 
 ## License
 

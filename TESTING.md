@@ -38,7 +38,13 @@ Windows 10 installation media available from Microsoft at the time. In one expor
 portable application converted PNG to WebP, enlarged to 200%, and applied a bottom-right
 logo with custom margins. The creator confirmed smooth operation and accurate output
 on all these points. The exact Windows version/build, absence of installed Python, and
-network isolation were not recorded for this run.
+network isolation were not recorded for this first run.
+
+The creator then repeated PNG to JPEG conversion with the VM network disabled and
+confirmed correct output. Checks found only Microsoft Store execution aliases for
+`python`/`python3`; `py` was absent. No separate usable Python installation was found
+through these command checks. This supports offline, self-contained operation in that
+VM, without proving the absence of every possible hidden interpreter.
 
 ## Compatibility boundaries
 
@@ -50,9 +56,7 @@ On 2026-10-08, the creator tested `release-public` in a fresh Windows 10 version
 error. This OS is below the dependency minimum; the precise failing dependency has not
 been identified. The later successful Windows 10 test is recorded above.
 
-The current portable build is unsigned. Confirmation that the successful Windows 10 VM
-run had no installed Python and no network access, plus physical high-DPI testing,
-remain pending. Offscreen UI checks do not replace hands-on
+The current portable build is unsigned. Physical high-DPI testing remains pending. Offscreen UI checks do not replace hands-on
 Explorer drag/drop and keyboard usability checks.
 
 The application uses no networking APIs. The build-time materials collector downloads

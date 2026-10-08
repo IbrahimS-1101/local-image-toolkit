@@ -10,8 +10,10 @@ the [MIT license](LICENSE). No uploads, accounts, subscriptions, or runtime inte
 
 ## Get started
 
-Windows portable builds are distributed through [GitHub Releases](https://github.com/IbrahimS-1101/local-image-toolkit/releases).
-If a public build is not available yet, use the source setup below.
+**[Download v1.0.0 for Windows x64](https://github.com/IbrahimS-1101/local-image-toolkit/releases/download/v1.0.0/Local-Image-Toolkit-1.0.0-Windows-x64.zip)**
+
+See [release notes and SHA-256 checksum](https://github.com/IbrahimS-1101/local-image-toolkit/releases/tag/v1.0.0).
+Requires Windows 10 version 1809 or later, or Windows 11.
 
 1. Download and extract the entire Windows portable ZIP.
 2. Double-click **Local Image Toolkit.exe**. No Python installation is needed for the portable build.
